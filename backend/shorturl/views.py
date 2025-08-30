@@ -6,7 +6,7 @@ from .models import ShortUrl
 from .serializers import ShortUrlSerializer
 from .utils import generate_short_code
 
-class ShortUrl(api_view):
+class Url_shortener(APIView):
     def post(self, request):
         serializer = ShortUrlSerializer(data=request.data)
         if serializer.is_valid():
